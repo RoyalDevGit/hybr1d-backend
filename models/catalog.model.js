@@ -24,6 +24,10 @@ const orderSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     required: true,
   },
+  sellerId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+  },
   products: [productSchema]
 })
 
@@ -31,4 +35,4 @@ const Product = mongoose.model('Product', productSchema);
 const Catalog = mongoose.model('Catalog', catalogSchema);
 const Order = mongoose.model('Order', orderSchema);
 
-export { Product, Catalog, Order }; 
+module.exports = { Product, Catalog, Order }; 

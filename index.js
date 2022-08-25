@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const authRoutes = require('./routers/auth');
 
 require('dotenv').config();
 
@@ -7,6 +9,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/api/auth', authRoutes);
 
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {

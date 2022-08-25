@@ -9,7 +9,11 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: 'Password is required'
+  },
+  isBuyer: {
+    type: Boolean,
+    required: true
   }
 });
 
-export default mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
