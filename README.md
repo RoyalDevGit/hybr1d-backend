@@ -4,9 +4,9 @@ Using:
 - Node.js
 - Express
 
-###### Set up
+### Set up
 1. cd hybr1d-backend
 2. npm install
 
-###### How to run
+### How to run
 1. npm start or yarn install
