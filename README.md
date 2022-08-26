@@ -9,4 +9,4 @@ Using:
 2. npm install
 
 ### How to run
-1. npm start or yarn install
+1. <b> npm start </b> or yarn install
