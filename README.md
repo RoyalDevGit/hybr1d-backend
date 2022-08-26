@@ -1,7 +1,7 @@
 <h1 align='center'>Hybr1d backend assessment</h1>
 
 ## Overview
-This is a mockup of REST API for an e-commerce marketplace.
+This is a mockup of REST API for an e-commerce marketplace. <br/>
 The endpoints are like the following:
 POST /api/auth/register
   Register a user (accept username, password, type of user - buyer/seller)
