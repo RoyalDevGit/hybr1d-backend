@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routers/auth');
 const buyerRoutes = require('./routers/buyer');
+const sellerRoutes = require('./routers/seller');
 
 require('dotenv').config();
 
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/buyer', buyerRoutes);
+app.use('/api/seller', sellerRoutes);
 
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
   if (err) {
