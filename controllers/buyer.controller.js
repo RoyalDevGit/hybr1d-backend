@@ -12,8 +12,11 @@ const getCatalog = async (req, res) => {
   return catalog;
 }
 
-const creatOrder = async (req, res) => {
-  const { buyerId, sellerId, products } = req.body;
+const createOrder = async (req, res) => {
+  const { buyerId, products } = req.body;
+  const sellerId = req.params.seller_id;
   const newOrder = new Order({ buyerId, sellerId, products });
   return newOrder;
 }
+
+module.exports = { getSellerList, getCatalog, createOrder };
